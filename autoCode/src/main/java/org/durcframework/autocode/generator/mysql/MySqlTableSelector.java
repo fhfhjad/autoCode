@@ -19,7 +19,7 @@ public class MySqlTableSelector extends TableSelector {
 
 	@Override
 	protected String getShowTablesSQL(String dbName) {
-		String sql = "SHOW TABLE STATUS FROM " + dbName;
+		String sql = "SHOW TABLE STATUS FROM `" + dbName + "`";
 		if(this.getSchTableNames() != null && this.getSchTableNames().size() > 0) {
 			StringBuilder tables = new StringBuilder();
 			for (String table : this.getSchTableNames()) {
