@@ -6,7 +6,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.apache.velocity.VelocityContext;
-import org.durcframework.autocode.common.AutoCodeContext;
 import org.durcframework.autocode.entity.ClientParam;
 import org.durcframework.autocode.entity.CodeFile;
 import org.durcframework.autocode.entity.DataSourceConfig;
