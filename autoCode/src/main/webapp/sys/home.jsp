@@ -26,8 +26,6 @@
 <pre>
 package &#36;{context.packageName}.model;
 
-
-
 public class &#36;{context.javaBeanName}{
 ## 此处用foreach循环构建java类中的属性
 #foreach(&#36;column in &#36;columns) 
