@@ -11,7 +11,6 @@ import org.durcframework.autocode.entity.ClientParam;
 import org.durcframework.autocode.entity.CodeFile;
 import org.durcframework.autocode.entity.DataSourceConfig;
 import org.durcframework.autocode.entity.GeneratorParam;
-import org.durcframework.autocode.generator.DataBaseConfig;
 import org.durcframework.autocode.service.DataSourceConfigService;
 import org.durcframework.autocode.service.GeneratorService;
 import org.durcframework.core.controller.BaseController;
