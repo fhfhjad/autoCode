@@ -24,11 +24,11 @@
 
 <div id="tab1-cont">
 <pre>
-package &#36;{context.packageName}.entity;
+package &#36;{context.packageName}.model;
 
-import org.durcframework.entity.BaseEntity;
 
-public class &#36;{context.javaBeanName} extends BaseEntity {
+
+public class &#36;{context.javaBeanName}{
 ## 此处用foreach循环构建java类中的属性
 #foreach(&#36;column in &#36;columns) 
     private &#36;{column.javaType} &#36;{column.javaFieldName};
@@ -53,9 +53,7 @@ public class &#36;{context.javaBeanName} extends BaseEntity {
 <pre>
 package datasourceconfig.entity;
 
-import org.durcframework.entity.BaseEntity;
-
-publc class DatasourceConfig extends BaseEntity {
+publc class DatasourceConfig {
     private int dcId;
     private String name;
     private String driverClass;
