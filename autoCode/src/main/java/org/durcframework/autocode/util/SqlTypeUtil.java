@@ -65,7 +65,8 @@ public class SqlTypeUtil {
 		javaBoxTypeMap.put("smallmoney", "BigDecimal");
 		javaBoxTypeMap.put("sql_variant", "String");
 		javaBoxTypeMap.put("text", "String");
-		javaBoxTypeMap.put("tinyint", "Byte");
+//		javaBoxTypeMap.put("tinyint", "Byte");
+		javaBoxTypeMap.put("tinyint", "Integer");
 		javaBoxTypeMap.put("timestamp", "Date");
 		javaBoxTypeMap.put("uniqueidentifier", "String");
 		javaBoxTypeMap.put("varbinary", "Byte[]");
