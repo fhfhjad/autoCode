@@ -247,7 +247,9 @@ function validatePackage(packageName){
 //完成
 function finish(){
 	var rows = gridTemplate.getChecked();
-	
+	/*$("input[name='genMethod']").each(function(){
+		alert($(this).prop('checked'));
+	});*/
 	if(rows && rows.length > 0){
 		generate();
 	}else{
@@ -277,6 +279,7 @@ function getPostData() {
 	var data = $.extend({},data1,data2);
 	var tcIds = [];
 	var tableNames = [];
+	var methodNames = [];
 	
 	var templateRows = gridTemplate.getChecked();
 	
@@ -292,6 +295,13 @@ function getPostData() {
 	}
 	
 	data.tableNames = tableNames;
+	
+	$("input[name='genMethod']").each(function(){
+		if($(this).prop('checked')){
+			methodNames.push($(this).attr("id"));
+		}
+	});
+	data.methodNames = methodNames;
 	
 	return data;
 }

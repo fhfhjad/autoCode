@@ -11,6 +11,11 @@ import org.durcframework.autocode.util.FieldUtil;
 public class SQLContext {
 	private TableDefinition tableDefinition; // 表结构定义
 	private String packageName; // 包名
+	private Boolean haveAdd; // 是否需要新增
+	private Boolean haveMod; // 是否需要修改
+	private Boolean haveDel; // 是否需要删除
+	private Boolean haveQuery; // 是否需要查询
+	private Boolean haveExport; // 是否需要导出
 	
 	public SQLContext(TableDefinition tableDefinition){
 		this.tableDefinition = tableDefinition;
@@ -106,6 +111,46 @@ public class SQLContext {
 		UserFrontUser
 		UserBackUser
 		*/
+	}
+
+	public Boolean getHaveAdd() {
+		return haveAdd;
+	}
+
+	public void setHaveAdd(Boolean haveAdd) {
+		this.haveAdd = haveAdd;
+	}
+
+	public Boolean getHaveMod() {
+		return haveMod;
+	}
+
+	public void setHaveMod(Boolean haveMod) {
+		this.haveMod = haveMod;
+	}
+
+	public Boolean getHaveDel() {
+		return haveDel;
+	}
+
+	public void setHaveDel(Boolean haveDel) {
+		this.haveDel = haveDel;
+	}
+
+	public Boolean getHaveQuery() {
+		return haveQuery;
+	}
+
+	public void setHaveQuery(Boolean haveQuery) {
+		this.haveQuery = haveQuery;
+	}
+
+	public Boolean getHaveExport() {
+		return haveExport;
+	}
+
+	public void setHaveExport(Boolean haveExport) {
+		this.haveExport = haveExport;
 	}
 	
 	

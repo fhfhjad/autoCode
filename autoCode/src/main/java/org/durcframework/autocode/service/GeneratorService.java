@@ -46,6 +46,8 @@ public class GeneratorService {
         
         for (SQLContext sqlContext : contextList) {
             setPackageName(sqlContext, generatorParam.getPackageName());
+            
+            setMathodName(sqlContext, generatorParam.getMethodNames());
 
             String packageName = sqlContext.getJavaBeanNameLF();
 
@@ -249,6 +251,22 @@ public class GeneratorService {
         if (StringUtils.hasText(packageName)) {
             sqlContext.setPackageName(packageName);
         }
+    }
+    
+    private void setMathodName(SQLContext sqlContext, List<String> list) {
+    	for (String name : list) {
+			if("add".equals(name)) {
+				sqlContext.setHaveAdd(true);
+			}else if("modify".equals(name)) {
+				sqlContext.setHaveMod(true);
+			}else if("query".equals(name)) {
+				sqlContext.setHaveQuery(true);
+			}else if("delete".equals(name)) {
+				sqlContext.setHaveDel(true);
+			}else if("export".equals(name)) {
+				sqlContext.setHaveExport(true);
+			}
+		}
     }
 
     private String doGenerator(SQLContext sqlContext, String template) {

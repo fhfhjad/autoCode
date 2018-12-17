@@ -7,6 +7,7 @@ public class GeneratorParam {
 	private List<String> tableNames;
 	private List<Integer> tcIds;
 	private String packageName;
+	private List<String> methodNames;
 	private String charset = "UTF-8";
 
 	public int getDcId() {
@@ -49,4 +50,12 @@ public class GeneratorParam {
 		this.charset = charset;
 	}
 
+	public List<String> getMethodNames() {
+		return methodNames;
+	}
+
+	public void setMethodNames(List<String> methodNames) {
+		this.methodNames = methodNames;
+	}
+	
 }

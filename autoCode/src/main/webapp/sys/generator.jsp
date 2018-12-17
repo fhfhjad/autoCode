@@ -74,6 +74,13 @@
 	   <div class="result-wrap">
 			<div class="result-content">
 				<div id="gridTemplate"></div>
+				<div id="checkBoxMethod">
+					新增：<input type="checkbox" id="add" name="genMethod" checked="checked"/>
+					&nbsp;&nbsp;修改：<input type="checkbox" id="modify" name="genMethod" checked="checked"/>
+					&nbsp;&nbsp;查询：<input type="checkbox" id="query" name="genMethod" checked="checked"/>
+					&nbsp;&nbsp;删除：<input type="checkbox" id="delete" name="genMethod" checked="checked"/>
+					&nbsp;&nbsp;导出：<input type="checkbox" id="export" name="genMethod"/>
+				</div>
 			</div>
 	   </div>
 		<br>
