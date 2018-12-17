@@ -94,6 +94,9 @@ public class GeneratorService {
         
         for (SQLContext sqlContext : contextList) {
             setPackageName(sqlContext, generatorParam.getPackageName());
+            
+            setMathodName(sqlContext, generatorParam.getMethodNames());
+            
             for (int tcId : generatorParam.getTcIds()) {
                 TemplateConfig template = templateConfigService.get(tcId);
                 String content = doGenerator(sqlContext, template.getContent());
